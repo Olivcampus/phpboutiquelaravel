@@ -21,10 +21,9 @@ Route::get('/product', function () {
     return view('Product_view');
 });
 
-Route::get('/product/{id}', function () {
-    return view('product{id}');
-});
-
+Route::get('/product/{id}', [ProductController::class, 'show'])->where('n', '[0-9]+');
 Route::get('/cart', function () {
     return view('Cart');
 });
+
+
