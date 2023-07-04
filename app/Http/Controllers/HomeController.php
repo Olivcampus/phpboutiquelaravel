@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function homepage()
+    public function homepage() :View
     {
         return view ('homepage');
     }
