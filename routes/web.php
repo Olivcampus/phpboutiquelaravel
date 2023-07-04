@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,16 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Homepage');
+    return view('homepage');
 });
 
 Route::get('/product', function () {
-    return view('Product_view');
+    return view('product-list');
 });
 
-Route::get('/product/{id}', [ProductController::class, 'show'])->where('n', '[0-9]+');
+Route::get('/product/{id}', [ProductController::class, 'show'])->where('id', '[0-9]+');
 Route::get('/cart', function () {
     return view('Cart');
 });
-
-

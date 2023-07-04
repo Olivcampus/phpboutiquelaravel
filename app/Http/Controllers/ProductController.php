@@ -8,13 +8,13 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function show ($id) : View
+    public function show ($id) 
     {
-        return View ('product')-> with ('id', $id);
+        return View ('product-detail')-> with ('id', $id);
     }
 
     public function Product_view()
     {
-        return View ('Product_view');
+        return View ('product-list');
     }
 }
