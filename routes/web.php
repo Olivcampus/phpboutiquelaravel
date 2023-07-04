@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/product', function () {
-    return view('Liste des produits');
+    return view('Product_view');
 });
 
 Route::get('/product/{id}', function () {
-    return view('Fiche du produit {id}');
+    return view('product{id}');
 });
 
 Route::get('/cart', function () {
-    return view('Panier');
+    return view('Cart');
 });
